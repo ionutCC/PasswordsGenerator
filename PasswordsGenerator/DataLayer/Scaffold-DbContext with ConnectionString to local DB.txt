@@ -1,0 +1,4 @@
+Firslty open from visual "Package Manager Console"
+
+Scaffold-DbContext -Connection "Persist Security Info=False;Initial Catalog=PasswordsGeneratorDB;Server=LAPTOP-IT207G8G; Integrated Security=SSPI" -Provider "Microsoft.EntityFrameworkCore.SqlServer" -OutputDir "Entities" -ContextDir "Context" -Schemas "dbo" -Tables "UserPasswordGenerated" -UseDatabaseNames -NoPluralize -Force
+

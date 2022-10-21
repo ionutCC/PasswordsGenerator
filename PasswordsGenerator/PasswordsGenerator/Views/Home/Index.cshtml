@@ -1,0 +1,28 @@
+﻿@model PasswordsGenerator.ViewModels.Home.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm()){
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div>
+        <label>Enter the User Name</label>
+        @Html.EditorFor(model => model.userID)
+        @Html.ValidationMessageFor(model => model.userID, "", new { @class="text-danger"})
+            <br /> <br />
+        <label>Enter a DateTime</label>
+        @Html.EditorFor(model => model.passwordGenerationDatetime)
+        @Html.ValidationMessageFor(model => model.passwordGenerationDatetime, "", new { @class="text-danger"})
+    </div>
+    <br />
+    <div>
+        <input type="submit" name="generatePassword" value="Generate password" formmethod="post" /> 
+    </div>
+</div>
+}
+
+@*@section scripts {
+    <script src="~/js/HomePage/HomePageJS.js" type="text/javascript" asp-append-version="true"></script>
+}
+*@
